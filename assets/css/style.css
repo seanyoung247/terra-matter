@@ -1,3 +1,4 @@
+/* ------------------------- General set up -------------------------   */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,10 +12,78 @@ body {
     overflow: hidden;
 }
 
+button,
+a {
+    /* will make impossible for the user to select the text in the button */
+    user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    font-family: "Handlee", cursive;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* ------------------------- SVG ------------------------- */
 #house-image {
     height: 100%;
 }
 
 #tv:hover {
     stroke: blue;
+}
+
+/* ------------------------- Contact page ------------------------- */
+
+.btn-back-home {
+    position: relative;
+    top: 6px;
+    left: 6px;
+}
+
+.overlay,
+.spinner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sending-spinner {
+    font-size: 1.5rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.overlay-active,
+.spinner-active {
+    opacity: 1;
+    transition: opacity 350ms ease-in-out;
+    -o-transition: opacity 350ms ease-in-out;
+    -moz-transition: opacity 350ms ease-in-out;
+    -ms-transition: opacity 350ms ease-in-out;
+    -webkit-transition: opacity 350ms ease-in-out;
+}
+
+.modal {
+    top: 30%;
+}
+
+.modal-footer {
+    justify-content: center;
 }
