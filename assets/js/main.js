@@ -1,7 +1,6 @@
 
-const objects = document.querySelectorAll('.st274,.st275');
-
-console.log(objects);
+const objects = document.querySelectorAll('.object-outline,.power-station-outline');
+const objectCount = objects.length;
 
 for (const object of objects) {
     console.log(object);
@@ -50,6 +49,7 @@ for (const object of objects) {
     living room:
         livingroom-lights-outline - livingroom lights trigger
             livingroom-lights - livingroom lights graphics
+            livingroom-blackout - graphic to make room darker when lights are off
         
         tv-outline - TV trigger
             TV - TV graphic
@@ -57,6 +57,7 @@ for (const object of objects) {
     bedroom:
         bedroom-lights-outline - bedroom lights trigger
             bedroom-lights - bedroom lights graphics
+            bedroom-blackout - graphic to make room darker when lights are off
 
         covers-outline - bedroom covers trigger
         
