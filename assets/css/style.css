@@ -86,6 +86,10 @@ main {
 /* 
  * SVG styles
  */
+#house-svg {
+    --mix: 0.0;
+}
+
 svg .disabled,
 svg .disabled * {
     fill: none;

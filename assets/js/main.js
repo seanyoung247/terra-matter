@@ -1,16 +1,28 @@
+
+const graphic = document.getElementById('house-svg');
 const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
 const objectCount = objects.length;
+/**
+ * state is a value between 0.0 and 1.0 reflecting how many objects have been activated.
+ * Where 0.0 is 0% and 1.0 is 100%.
+ */
+let state = 0.0;
 
-//console.log(objects.length);
+/**
+ * Updates state with the current number of activated objects.
+ * @param {Number} count - The current number of activated objects
+ */
+function updateState(count) {
+    state = count / objectCount;
+    console.log(state);
+    graphic.style.setProperty('--mix', state);
+}
+
 function objectClick() {
-    let objId = this.id;
-    //console.log(objId);
-    // If there's a bound action for this object, do it now
-    if (actions[objId]) {
-        actions[objId].do();
+    if (actions[this.id]) {
+        actions[this.id].do(updateState);
     }
 }
 for (const object of objects) {
-    //console.log(object.id);
     object.addEventListener('click', objectClick);
 }
