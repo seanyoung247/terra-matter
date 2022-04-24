@@ -4,7 +4,7 @@
 
 ## Visit the live Website : **[Terra Matter :arrow_right:](https://seanyoung247.github.io/terra-matter/)**
 
-**Terra Matter** is a learning web application that promotes curiosity and enjoyment in the process of acquiring knowledge about the impact of our daily routine on the evironment.
+**Terra Matter** is a learning web application that promotes curiosity and enjoyment in the process of acquiring knowledge about the impact of our daily routine on the environment.
 
 This project is created in recognition of Earth day and our love and care of our home, the Planet Earth.
 
