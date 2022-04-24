@@ -33,13 +33,9 @@ main {
     overflow: hidden;
 }
 
-#house-image {
-    height: 100%;
-}
-
-#tv:hover {
-    stroke: blue;
-}
+/* 
+ * SVG styles
+ */
 .oven_x002D_door_x002D_body {
     fill:#3A4245;
 }
