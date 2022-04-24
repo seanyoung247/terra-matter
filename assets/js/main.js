@@ -1,7 +1,32 @@
 
 let issues = 0;
-const objects = document.querySelectorAll('.object-outline,.power-station-outline');
+const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
 const objectCount = objects.length;
+
+function incCount(obj, amt = 1) {
+    obj.triggered = !obj.triggered;
+    issues += obj.triggered ? amt : -amt;
+    console.log(issues,obj.triggered);
+} 
+
+const dishes = {
+    triggered: false,
+    do: function() {
+        const dishes = document.getElementById('kitchen-dishes');
+        dishes.classList.toggle('disabled');
+
+        incCount(this, 2);
+        //TO DO: Show information dialog
+    }
+};
+
+const cooking = {
+    triggered: false,
+    do: function() {
+        incCount(this);
+        //TO DO: Show information dialog
+    }
+};
 
 const actions = {
     'power-station-trigger': {
@@ -12,8 +37,8 @@ const actions = {
             coalStation.classList.toggle('disabled');
             windmills.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
@@ -23,20 +48,26 @@ const actions = {
             const insulation = document.getElementById('loft-insulation');
             insulation.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
     // Kitchen
     "fridge-outline": {
         triggered: false,
-        do: function() {}
+        do: function() {
+            incCount(this);
+            //TO DO: Show information dialog
+        }
     },
 
     "kettle-outline": {
         triggered: false,
-        do: function() {}
+        do: function() {
+            incCount(this);
+            //TO DO: Show information dialog
+        }
     },
 
     "kitchen-tap-outline": {
@@ -47,42 +78,16 @@ const actions = {
             water.classList.toggle('disabled');
             stream.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
-    "kitchen-sink-outline": {
-        triggered: false,
-        do: function() {
-            const dishes = document.getElementById('kitchen-dishes');
-            dishes.classList.toggle('disabled');
+    "kitchen-sink-outline": dishes,
+    "dishwasher-outline": dishes,
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
-        }
-    },
-
-    "microwave-outline": {
-        triggered: false,
-        do: function() {}
-    },
-
-    "dishwasher-outline": {
-        triggered: false,
-        do: function() {
-            const dishes = document.getElementById('kitchen-dishes');
-            dishes.classList.toggle('disabled');
-
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
-        }
-    },
-
-    "oven-outline": {
-        triggered: false,
-        do: function() {}
-    },
+    "microwave-outline": cooking,
+    "oven-outline": cooking,
 
     // Living room
     'livingroom-lights-outline': {
@@ -91,8 +96,8 @@ const actions = {
             const blackout = document.getElementById('livingroom-blackout');
             blackout.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
@@ -102,8 +107,8 @@ const actions = {
             const tvLed = document.getElementById('power-led');
             tvLed.classList.toggle('off');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
@@ -114,14 +119,17 @@ const actions = {
             const blackout = document.getElementById('bedroom-blackout');
             blackout.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
     "covers-outline": {
         triggered: false,
-        do: function() {}
+        do: function() {
+            incCount(this);
+            //TO DO: Show information dialog
+        }
     },
 
     "socket-outline": {
@@ -130,20 +138,26 @@ const actions = {
             const charger = document.getElementById('charger');
             charger.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
     // Bathroom
     "toilet-outline": {
         triggered: false,
-        do: function() {}
+        do: function() {
+            incCount(this);
+            //TO DO: Show information dialog
+        }
     },
 
     "toilet-paper-outline": {
         triggered: false,
-        do: function() {}
+        do: function() {
+            incCount(this);
+            //TO DO: Show information dialog
+        }
     },
 
     "bathroom-tap-outline": {
@@ -154,8 +168,8 @@ const actions = {
             water.classList.toggle('disabled');
             stream.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
@@ -168,25 +182,30 @@ const actions = {
             water.classList.toggle('disabled');
             stream.classList.toggle('disabled');
 
-            this.triggered = !this.triggered;
-            //TO DO: Show information dialog, increment/decrement active issue counter
+            incCount(this);
+            //TO DO: Show information dialog
         }
     },
 
     "washing-machine-outline": {
         triggered: false,
-        do: function() {}
+        do: function() {
+            incCount(this);
+            //TO DO: Show information dialog
+        }
     }
 }
 
+//console.log(objects.length);
 function objectClick() {
-    let objId = (this.id) ? this.id : this.parentElement.id;
-    console.log(objId);
+    let objId = this.id;
+    //console.log(objId);
     // If there's a bound action for this object, do it now
     if (actions[objId]) {
         actions[objId].do();
     }
 }
 for (const object of objects) {
+    //console.log(object.id);
     object.addEventListener('click', objectClick);
 }
