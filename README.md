@@ -218,6 +218,9 @@ For importing fonts (**Fredoka One**, **Handlee** and **Andika New Basic**) into
 * [Font Awesome](https://fontawesome.com/icons?d=gallery)  
 For using icons throughout the website.
 
+* [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html?mv=search&mv=search&sdid=KCJMVLF6&ef_id=Cj0KCQjw6pOTBhCTARIsAHF23fLEZr_7HRwIXxz-8HlXPJdeIFcn4mgqdShGl6MxV75SQB7gldl4qukaAoC3EALw_wcB:G:s&s_kwcid=AL!3085!3!520938456683!e!!g!!adobe%20illustrator!1426208079!56320331272&gclid=Cj0KCQjw6pOTBhCTARIsAHF23fLEZr_7HRwIXxz-8HlXPJdeIFcn4mgqdShGl6MxV75SQB7gldl4qukaAoC3EALw_wcB)  
+For create the logo.
+
 * [favicon.io](https://favicon.io/favicon-converter/)  
 For generating the favicon.
 
