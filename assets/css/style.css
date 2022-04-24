@@ -1,4 +1,17 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
 /* ------------------------- General set up -------------------------   */
+root {
+  /* Font */
+  --font-family: 'Roboto', sans-serif;
+
+  /* Colors */
+  --color-text-dark: #444;
+  --color-text-light: #f1f1f1;  
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,6 +44,42 @@ main {
     align-items: stretch;
     height: 100vh;
     overflow: hidden;
+}
+
+/* ------------------------- Header ------------------------- */
+.navbar {
+  align-items: center;
+  background-color: var(--color-primary);
+  display: flex;  
+  justify-content: space-between;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+.navbar__logo {
+  width: 100px;
+}
+
+.navbar__links {
+  display: flex;
+}
+
+.navbar__link{   
+  color: var(--color-text-dark);
+  font-size: 20px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0 15px; 
+  text-transform: uppercase;
+}
+
+/* the colors variables are not work with hover */
+.navbar__link:hover, 
+.navbar__link--active{
+  color: #1046B3;
+  border-bottom: 2px solid #1046B3;
 }
 
 /* 
