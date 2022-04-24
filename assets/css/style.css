@@ -77,6 +77,11 @@ svg .disabled * {
 
 .standby_x002D_light {
     fill: #FF3912;
+    stroke: #FF3912;
+}
+
+.standby_x002D_light.off {
+    fill: #FF391200;
 }
 
 .water {

@@ -28,6 +28,63 @@ const actions = {
         }
     },
 
+    // Kitchen
+    "fridge-outline": {
+        triggered: false,
+        do: function() {}
+    },
+
+    "kettle-outline": {
+        triggered: false,
+        do: function() {}
+    },
+
+    "kitchen-tap-outline": {
+        triggered: false,
+        do: function() {
+            const water = document.getElementById('kitchen-sink-water');
+            const stream = document.getElementById('kitchen-water-line');
+            water.classList.toggle('disabled');
+            stream.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    "kitchen-sink-outline": {
+        triggered: false,
+        do: function() {
+            const dishes = document.getElementById('kitchen-dishes');
+            dishes.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    "microwave-outline": {
+        triggered: false,
+        do: function() {}
+    },
+
+    "dishwasher-outline": {
+        triggered: false,
+        do: function() {
+            const dishes = document.getElementById('kitchen-dishes');
+            dishes.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    "oven-outline": {
+        triggered: false,
+        do: function() {}
+    },
+
+    // Living room
     'livingroom-lights-outline': {
         triggered: false,
         do: function() {
@@ -39,6 +96,18 @@ const actions = {
         }
     },
 
+    "tv-outline": {
+        triggered: false,
+        do: function() {
+            const tvLed = document.getElementById('power-led');
+            tvLed.classList.toggle('off');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    // Bedroom
     'bedroom-lights-outline': {
         triggered: false,
         do: function() {
@@ -48,96 +117,76 @@ const actions = {
             this.triggered = !this.triggered;
             //TO DO: Show information dialog, increment/decrement active issue counter
         }
+    },
+
+    "covers-outline": {
+        triggered: false,
+        do: function() {}
+    },
+
+    "socket-outline": {
+        triggered: false,
+        do: function() {
+            const charger = document.getElementById('charger');
+            charger.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    // Bathroom
+    "toilet-outline": {
+        triggered: false,
+        do: function() {}
+    },
+
+    "toilet-paper-outline": {
+        triggered: false,
+        do: function() {}
+    },
+
+    "bathroom-tap-outline": {
+        triggered: false,
+        do: function() {
+            const water = document.getElementById('bathroom-sink-water');
+            const stream = document.getElementById('bathroom-sink-water-line');
+            water.classList.toggle('disabled');
+            stream.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    "shower-outline": {
+        triggered: false,
+        do: function() {
+            const water = document.getElementById('water-stream');
+            const stream = document.getElementById('water-lines');
+            console.log(water);
+            water.classList.toggle('disabled');
+            stream.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    "washing-machine-outline": {
+        triggered: false,
+        do: function() {}
     }
 }
 
 function objectClick() {
     let objId = (this.id) ? this.id : this.parentElement.id;
     console.log(objId);
-
     // If there's a bound action for this object, do it now
     if (actions[objId]) {
         actions[objId].do();
     }
 }
-
 for (const object of objects) {
-    console.log(object);
     object.addEventListener('click', objectClick);
 }
-
-
-
-/*
-    Object IDs:
-
-    attic-object - Trigger for floor space of loft
-        loft-insulation - loft insulation graphic
-
-    power-station-outline - Trigger for coal fired power station
-        power-plant - coal fired station graphic
-        windmills - windmill graphic
-    
-    kitchen:
-        fridge-outline - Trigger for fridge
-            fridge - fridge graphic
-
-        kettle-outline - Trigger for kettle
-            kettle - Kettle graphic
-
-        kitchen-tap-outline - Trigger for kitchen tap
-            tap - kitchen tap graphic
-            kitchen-water-line, kitchen-sink-water: water graphic
-
-        kitchen-sink-outline - Trigger for kitchen sink
-            sink - graphic for sink and tap
-            dishes - dirty dishes graphic
-            dishwasher - dishwasher graphic
-
-        microwave-outline - Trigger for microwave
-            microwave - microwave graphic
-
-        dishwasher-outline - Trigger for dishwasher
-            dishwasher - dishwasher graphic
-
-        oven-outline - Trigger for oven
-            oven - oven graphic
-
-    living room:
-        livingroom-lights-outline - livingroom lights trigger
-            livingroom-lights - livingroom lights graphics
-            livingroom-blackout - graphic to make room darker when lights are off
-        
-        tv-outline - TV trigger
-            TV - TV graphic
-
-    bedroom:
-        bedroom-lights-outline - bedroom lights trigger
-            bedroom-lights - bedroom lights graphics
-            bedroom-blackout - graphic to make room darker when lights are off
-
-        covers-outline - bedroom covers trigger
-        
-        socket-outline - power socket trigger
-            bedroom-socket - bedroom socket graphic
-            charger - charger/power lead graphic
-
-    bathroom:
-        toilet-outline - toilet trigger
-            toilet - toilet graphic
-        
-        toilet-paper-outline - toilet paper trigger
-            toilet-paper - toilet paper graphic
-        
-        bathroom-tap-outline - bathroom tap trigger
-            bathroom-tap - bathroom tap graphic
-            bathroom-sink-water, bathroom-sink-water-line - water graphics
-        
-        shower-outline - shower trigger
-            bath - bath graphic
-            shower-pipe, shower-head - shower graphic
-            water-stream, water-lines - shower water graphics
-        
-        washing-machine-outline - washing machine trigger
-            washing-machine - washing machine graphic
- */
