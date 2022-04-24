@@ -5,11 +5,8 @@
     padding: 0;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+li {
+  list-style: none;
 }
 
 button,
@@ -27,60 +24,14 @@ a {
     text-align: center;
     cursor: pointer;
 }
-
-/* ------------------------- Contact page ------------------------- */
-
-.btn-back-home {
-    position: relative;
-    top: 6px;
-    left: 6px;
-}
-
-.overlay,
-.spinner-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    opacity: 0;
-}
-
-.sending-spinner {
-    font-size: 1.5rem;
-    position: relative;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-}
-
-.overlay-active,
-.spinner-active {
-    opacity: 1;
-    transition: opacity 350ms ease-in-out;
-    -o-transition: opacity 350ms ease-in-out;
-    -moz-transition: opacity 350ms ease-in-out;
-    -ms-transition: opacity 350ms ease-in-out;
-    -webkit-transition: opacity 350ms ease-in-out;
-}
-
-.modal {
-    top: 30%;
-}
-
-.modal-footer {
-    justify-content: center;
-}
-
-
 /* ------------------------- SVG ------------------------- */
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
 
 #house-image {
     height: 100%;
