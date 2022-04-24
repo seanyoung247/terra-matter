@@ -1,14 +1,71 @@
 
+let issues = 0;
 const objects = document.querySelectorAll('.object-outline,.power-station-outline');
 const objectCount = objects.length;
 
+const actions = {
+    'power-station-trigger': {
+        triggered: false,
+        do: function() {
+            const coalStation = document.getElementById('power-plant');
+            const windmills = document.getElementById('windmills');
+            coalStation.classList.toggle('disabled');
+            windmills.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    'attic-object': {
+        triggered: false,
+        do: function() {
+            const insulation = document.getElementById('loft-insulation');
+            insulation.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    'livingroom-lights-outline': {
+        triggered: false,
+        do: function() {
+            const blackout = document.getElementById('livingroom-blackout');
+            blackout.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    },
+
+    'bedroom-lights-outline': {
+        triggered: false,
+        do: function() {
+            const blackout = document.getElementById('bedroom-blackout');
+            blackout.classList.toggle('disabled');
+
+            this.triggered = !this.triggered;
+            //TO DO: Show information dialog, increment/decrement active issue counter
+        }
+    }
+}
+
+function objectClick() {
+    let objId = (this.id) ? this.id : this.parentElement.id;
+    console.log(objId);
+
+    // If there's a bound action for this object, do it now
+    if (actions[objId]) {
+        actions[objId].do();
+    }
+}
+
 for (const object of objects) {
     console.log(object);
-    object.addEventListener('click', function(e) {
-        let objId = (this.id) ? this.id : this.parentElement.id;
-        console.log(objId);
-    });
+    object.addEventListener('click', objectClick);
 }
+
 
 
 /*
