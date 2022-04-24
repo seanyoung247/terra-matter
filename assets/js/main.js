@@ -1,7 +1,6 @@
 
-const objects = document.querySelectorAll('.st274,.st275');
-
-console.log(objects);
+const objects = document.querySelectorAll('.object-outline,.power-station-outline');
+const objectCount = objects.length;
 
 for (const object of objects) {
     console.log(object);

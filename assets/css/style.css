@@ -28,6 +28,7 @@ a {
 main {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     height: 100vh;
     overflow: hidden;
 }
