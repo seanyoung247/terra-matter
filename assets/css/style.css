@@ -11,15 +11,6 @@ body {
     overflow: hidden;
 }
 
-#house-image {
-    height: 100%;
-}
-
-#tv:hover {
-    stroke: blue;
-}
-
-
 /* 
  * SVG styles
  */
