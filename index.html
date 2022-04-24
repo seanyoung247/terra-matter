@@ -30,15 +30,18 @@
     <title>Terra Matter</title>
 
   </head>
-  <body>
+  <body id="home">
     <header class="navbar">
       <h1>
-        <img src="assets/images/logo/terra_matter_logo_main_black.png" alt="Terra Matter">
+        <a href="#home">
+          <img class="navbar__logo" src="assets/images/logo/terra_matter_logo_main_black.svg" alt="Terra Matter">
+        </a>
       </h1>
       <nav>
-        <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">About</a></li>
+        <ul class="navbar__links">
+          <li><a class="navbar__link navbar__link--active" href="index.html">Home</a></li>
+          <li><a class="navbar__link" href="contact.html">Contact</a></li>
+          <li><a class="navbar__link" href="about.html">About</a></li>
         </ul>
       </nav>
     </header>
