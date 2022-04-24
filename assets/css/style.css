@@ -36,6 +36,12 @@ main {
 /* 
  * SVG styles
  */
+svg .disabled,
+svg .disabled * {
+    fill: none;
+    stroke: none;
+}
+
 .metal_x002D_body {
     fill: #CCCCCC;
 }
