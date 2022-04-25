@@ -4,7 +4,6 @@ let issues = 0;
 function incCount(obj, amt = 1) {
     obj.triggered = !obj.triggered;
     issues += obj.triggered ? amt : -amt;
-    //console.log(issues,obj.triggered);
 }
 
 function loadState() {
@@ -45,6 +44,7 @@ const cooking = {
     triggered: false,
     setGraphic: function() {},
     do: function(callback) {
+
         incCount(this, 2);
         callback(issues);
         //TO DO: Show information dialog
@@ -260,6 +260,22 @@ const actions = {
             incCount(this);
             callback(issues);
             //TO DO: Show information dialog
+            displayObjectInformation("washing-machine-outline")
         }
     }
+}
+
+
+function getObjectInformation() {
+    fetch("assets/js/JSON/objects-info.JSON")
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            let objectsInfo = data;
+        });
+}
+
+function displayObjectInformation(item) {
+    
 }
