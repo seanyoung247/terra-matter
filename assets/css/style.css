@@ -25,6 +25,10 @@
     padding: 0;
 }
 
+html {
+  font-family: var(--font__family);
+}
+
 li {
     list-style: none;
 }
@@ -39,7 +43,6 @@ a {
     -webkit-user-select: none;
 
     font-family: var(--font__family);
-    /* font-family: "Handlee", cursive; */
     font-weight: bold;
     text-decoration: none;
     text-align: center;
