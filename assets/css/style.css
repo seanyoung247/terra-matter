@@ -7,6 +7,10 @@
 :root {
   /* Font */
   --font__family: 'Roboto', sans-serif;
+  --font__title--size: 54px;
+  --font__title--weight: 300;
+  --font__text--size: 26px;
+  --font__text--weight: 400;
 
   /* Colors */
   --color__text--dark: #333;
@@ -83,6 +87,23 @@ main {
 .navbar__link--active {
   color: var(--color__primary);
   border-bottom: 2px solid var(--color__primary);
+}
+
+/* ------------------------- Banner ------------------------- */
+.banner{
+  background-color: #03b2bf;
+  padding-top: 150px;
+}
+
+.banner__title {
+  font-size: var(--font__title--size);
+  font-weight: var(--font__title--weight);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.5px;
+  padding-bottom: 20px;
+  width: 70%;
+  margin: auto;
 }
 
 /* 
@@ -175,12 +196,15 @@ main {
 }
 
 /* ------------------------- Footer ------------------------- */
+.footer--home {
+  background-color: #61b256;
+}
 
 .icons {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 0 0 50px;
 }
 
 .icons__link {
