@@ -41,7 +41,7 @@ const dishes = {
         incCount(this, 2);
         this.setGraphic();
         callback(issues);
-        //TO DO: Show information dialog
+        displayObjectInformation("kitchen-sink-outline")
     }
 };
 
@@ -51,7 +51,7 @@ const cooking = {
     do: function(callback) {
         incCount(this, 2);
         callback(issues);
-        //TO DO: Show information dialog
+        displayObjectInformation("microwave-outline")
     }
 };
 
@@ -70,7 +70,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("power-station-trigger")
         }
     },
 
@@ -84,7 +84,8 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            console.log('attic clicked')
+            displayObjectInformation("attic-object")
         }
     },
 
@@ -95,7 +96,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("fridge-outline")
         }
     },
 
@@ -105,7 +106,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("kettle-outline")
         }
     },
 
@@ -121,7 +122,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("kitchen-tap-outline")
         }
     },
 
@@ -142,7 +143,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("livingroom-lights-outline")
         }
     },
 
@@ -156,7 +157,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("tv-outline")
         }
     },
 
@@ -171,7 +172,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("bedroom-lights-outline")
         }
     },
 
@@ -181,7 +182,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("covers-outline")
         }
     },
 
@@ -195,7 +196,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("socket-outline")
         }
     },
 
@@ -206,7 +207,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("toilet-outline")
         }
     },
 
@@ -216,7 +217,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("toilet-paper-outline")
         }
     },
 
@@ -232,7 +233,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("bathroom-tap-outline")
         }
     },
 
@@ -248,7 +249,7 @@ const actions = {
             incCount(this);
             this.setGraphic();
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("shower-outline")
         }
     },
 
@@ -258,23 +259,44 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
             displayObjectInformation("washing-machine-outline")
         }
     }
 }
 
-
-function getObjectInformation() {
+// Display the modal with the corresponding info
+let objectModal = document.getElementById("object-info-modal")
+let modalTitle = document.getElementById("object-name")
+let modalContent = document.getElementById("object-description")
+function displayObjectInformation(item) {
     fetch("assets/js/JSON/objects-info.JSON")
         .then((res) => {
             return res.json();
         })
         .then((data) => {
             let objectsInfo = data;
+
+            for (let i = 0; i < objectsInfo.length; i++) {
+                if (objectsInfo[i].objectId === item) {
+                    objectName = objectsInfo[i].objectName
+                    objectDescription = objectsInfo[i].objectDescription
+                    break
+                }
+            }
+            console.log("in the then fucntion")
+            modalTitle.innerText = objectName
+            console.log(objectName)
+            modalContent.innerText = objectDescription
+            console.log(objectDescription)
+            objectModal.classList.add("show", "d-block")
         });
 }
 
-function displayObjectInformation(item) {
-    
-}
+// Close object info modal
+let closeInfoModalButtons = document.querySelectorAll("[data-info-modal-dismiss]")
+console.log(closeInfoModalButtons)
+closeInfoModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        objectModal.classList.remove("show", "d-block");
+    });
+});
