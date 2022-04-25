@@ -7,9 +7,9 @@
 :root {
   /* Font */
   --font__family: 'Roboto', sans-serif;
-  --font__title--size: 54px;
+  --font__title--size: 30px;
   --font__title--weight: 300;
-  --font__text--size: 26px;
+  --font__text--size: 20px;
   --font__text--weight: 400;
 
   /* Colors */
@@ -38,7 +38,8 @@ a {
     -moz-user-select: none;
     -webkit-user-select: none;
 
-    font-family: "Handlee", cursive;
+    font-family: var(--font__family);
+    /* font-family: "Handlee", cursive; */
     font-weight: bold;
     text-decoration: none;
     text-align: center;
@@ -92,23 +93,6 @@ main {
 .navbar__link--active {
   color: var(--color__primary);
   border-bottom: 2px solid var(--color__primary);
-}
-
-/* ------------------------- Banner ------------------------- */
-.banner{
-  background-color: #03b2bf;
-  padding-top: 150px;
-}
-
-.banner__title {
-  font-size: var(--font__title--size);
-  font-weight: var(--font__title--weight);
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1.5px;
-  padding-bottom: 20px;
-  width: 70%;
-  margin: auto;
 }
 
 /* 
