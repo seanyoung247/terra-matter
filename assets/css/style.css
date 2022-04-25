@@ -58,9 +58,10 @@ main {
   align-items: center;
   display: flex;  
   justify-content: space-between;
-  padding: 15px 15px 0 15px;
-  position: fixed;
-  width: 100%; 
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
 }
 
 .navbar__logo {
@@ -80,6 +81,10 @@ main {
   padding: 0 8px; 
   margin: 0 15px;
   text-transform: uppercase;
+
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
 }
 
 .navbar__link:hover, 
