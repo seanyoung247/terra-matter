@@ -3,6 +3,8 @@
  * Page setup and state management
  */
 (function() {
+    const svgPath = 'assets/templates/svg.html';
+
     const graphic = document.getElementById('house-svg');
     const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
     const objectCount = objects.length;
@@ -27,9 +29,18 @@
             actions[this.id].do(updateState);
         }
     }
-    for (const object of objects) {
-        object.addEventListener('click', objectClick);
-    }
+
+    // Load SVG from template
+    fetch(svgPath)
+    .then(responce => responce.text())
+    .then(data => {
+        const content = document.getElementById('content');
+        content.innerHTML = data;
+
+        for (const object of objects) {
+            object.addEventListener('click', objectClick);
+        }
+    });
 })();
 
 /*
