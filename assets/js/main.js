@@ -26,6 +26,7 @@
 
     function objectClick() {
         if (actions[this.id]) {
+            
             actions[this.id].do(updateState);
         }
     }
@@ -34,13 +35,16 @@
     fetch(svgPath)
     .then(responce => responce.text())
     .then(data => {
+        // Insert inline svg content into content area
         const content = document.getElementById('content');
         content.innerHTML = data;
-
-        const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
-        objectCount = objects.length;
         graphic = document.getElementById('house-svg');
 
+        // Read in the list of interactable objects defined in the svg
+        const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
+        objectCount = objects.length;
+
+        // Setup user events on svg objects
         for (const object of objects) {
             object.addEventListener('click', objectClick);
         }
