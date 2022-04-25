@@ -58,3 +58,6 @@
 (function() {
     const modal = new bootstrap.Modal(document.getElementById('info-modal'));
 })();
+(function() {
+    const contactModal = new bootstrap.Modal(document.getElementById('contact-modal'));
+})();
