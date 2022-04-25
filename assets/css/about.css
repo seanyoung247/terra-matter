@@ -1,0 +1,25 @@
+@import url("style.css");
+
+.modal-header,
+.modal-footer {
+   background: #006737;
+}
+
+.modal-title {
+  color: #fff;
+  font-family: var(--font__family);
+  font-weight: var(--font__title--weight);
+  font-size: var(--font__title--size);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.modal-body {
+  background: #28abe1;
+}
+
+.modal-body p {
+  font-size: var(--font__text--size);
+  font-family: var(--font__family);
+  letter-spacing: 1px;
+}
