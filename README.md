@@ -113,21 +113,19 @@ The targeted audience is international and adress everyone (from Earth and beyon
 
 #### Logo
 
-* The **logo** and **[favicon](assets/media/favicon/favicon.ico)** are the same image to follow best practice and consistency.
+* The **logo** and **[favicon](assets/images/favicon/favicon.ico)** are the same image to follow best practice and consistency.
 
-![Logo](assets/media/logo/logo.png)
+![Logo](assets/images/logo/terra_matter_logo_main_black.png)
 
 #### Colors
 
-![Colour scheme](assets/README-images/design/color.png)
+![Colour scheme](assets/README-images/website-design/color-scheme.png)
 
-The colours chosen for the website are bright and joyful. They are based on the psychology behind colours ([colour affects](http://www.colour-affects.co.uk/psychological-properties-of-colours), [London Image Institute](https://londonimageinstitute.com/how-to-empower-yourself-with-color-psychology/)).
+The colours chosen for the website are bright and joyful.
 
-[Something here](URL) to create the colour scheme.
+[Adobe color](https://color.adobe.com/create/image) was used to create the colour scheme.
 
-======================================================================================================== NEED TO BE CHECKED
-The swatches are said to be color-blind safe by Adobe Color [accessibility tool](https://color.adobe.com/create/color-accessibility).
-![Colour accessibility](assets/images/README-images/design/color-accessibility.png)
+The swatches are said to be color-blind safe by Adobe Color.
 
 #### Images
 
@@ -153,9 +151,7 @@ For the full version:
 * [Terra Matter](assets/README-images/wireframes/terra-matter.pdf)
 
 ### **Different Design**
-
-=============================================================== TBC
-Some designs are different from the wireframes because of user experience compliance, accessibility and time.  
+ 
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
