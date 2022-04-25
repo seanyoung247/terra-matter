@@ -146,6 +146,5 @@ svg .disabled * {
 .object-outline:hover,
 .power-station-outline:hover,
 #power-station-trigger:hover > .power-station-outline {
-    fill: #FF000022;
-    /* mix-blend-mode: screen; */
+    fill: #3a46b477;
 }
