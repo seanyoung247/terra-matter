@@ -62,7 +62,7 @@ const actions = {
             const coalStation = document.getElementById('power-plant');
             const windmills = document.getElementById('windmills');
             coalStation.classList.add('disabled');
-            windmills.classList.add('disabled');
+            windmills.classList.remove('disabled');
 
             document.getElementById('power-station-trigger').classList.add('disabled');
         },
@@ -78,7 +78,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const insulation = document.getElementById('loft-insulation');
-            insulation.classList.add('disabled');
+            insulation.classList.remove('disabled');
         },
         do: function(callback) {
             incCount(this);
