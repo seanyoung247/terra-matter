@@ -2,15 +2,20 @@
 let issues = 0;
 
 function incCount(obj, amt = 1) {
-    obj.triggered = !obj.triggered;
-    issues += obj.triggered ? amt : -amt;
+    if (!obj.triggered) {
+        obj.triggered = true;
+        issues += amt;
+    }
+    //obj.triggered = !obj.triggered;
+    //issues += obj.triggered ? amt : -amt;
 }
 
 function loadState() {
     let triggered_count = 0;
     for (const action in actions) {
         const triggered = (localStorage.getItem(action) === 'true');
-        if (this.triggered) {
+        if (triggered) {
+
             triggered_count++;
             actions[action].triggered = true;
             actions[action].setGraphic();
@@ -30,7 +35,7 @@ const dishes = {
     triggered: false,
     setGraphic: function() {
         const dishes = document.getElementById('kitchen-dishes');
-        dishes.classList.toggle('disabled');
+        dishes.classList.add('disabled');
     },
     do: function(callback) {
         incCount(this, 2);
@@ -56,8 +61,10 @@ const actions = {
         setGraphic: function() {
             const coalStation = document.getElementById('power-plant');
             const windmills = document.getElementById('windmills');
-            coalStation.classList.toggle('disabled');
-            windmills.classList.toggle('disabled');
+            coalStation.classList.add('disabled');
+            windmills.classList.add('disabled');
+
+            document.getElementById('power-station-trigger').classList.add('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -71,7 +78,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const insulation = document.getElementById('loft-insulation');
-            insulation.classList.toggle('disabled');
+            insulation.classList.add('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -107,8 +114,8 @@ const actions = {
         setGraphic: function() {
             const water = document.getElementById('kitchen-sink-water');
             const stream = document.getElementById('kitchen-water-line');
-            water.classList.toggle('disabled');
-            stream.classList.toggle('disabled');
+            water.classList.add('disabled');
+            stream.classList.add('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -129,7 +136,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const blackout = document.getElementById('livingroom-blackout');
-            blackout.classList.toggle('disabled');
+            blackout.classList.remove('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -143,7 +150,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const tvLed = document.getElementById('power-led');
-            tvLed.classList.toggle('off');
+            tvLed.classList.add('off');
         },
         do: function(callback) {
             incCount(this);
@@ -158,7 +165,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const blackout = document.getElementById('bedroom-blackout');
-            blackout.classList.toggle('disabled');
+            blackout.classList.remove('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -182,7 +189,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const charger = document.getElementById('charger');
-            charger.classList.toggle('disabled');
+            charger.classList.add('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -218,8 +225,8 @@ const actions = {
         setGraphic: function() {
             const water = document.getElementById('bathroom-sink-water');
             const stream = document.getElementById('bathroom-sink-water-line');
-            water.classList.toggle('disabled');
-            stream.classList.toggle('disabled');
+            water.classList.add('disabled');
+            stream.classList.add('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -234,8 +241,8 @@ const actions = {
         setGraphic: function() {
             const water = document.getElementById('water-stream');
             const stream = document.getElementById('water-lines');
-            water.classList.toggle('disabled');
-            stream.classList.toggle('disabled');
+            water.classList.add('disabled');
+            stream.classList.add('disabled');
         },
         do: function(callback) {
             incCount(this);
