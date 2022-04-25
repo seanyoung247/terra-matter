@@ -2,12 +2,12 @@
     {
         "objectId" : "attic-object",
         "objectName": "attic floor",
-        "objectDescription": "Install insulation"
+        "objectDescription": "Install insulation."
     },
     {
         "objectId" : "power-station-trigger",
         "objectName": "Power station",
-        "objectDescription": "Switch to an eco-energy plan"
+        "objectDescription": "Switch to an eco-energy plan."
     },
     {
         "objectId" : "fridge-outline",
@@ -17,71 +17,71 @@
     {
         "objectId" : "kettle-outline",
         "objectName": "kettle",
-        "objectDescription": "Don't boil more water than you need"
+        "objectDescription": "Don't boil more water than you need."
     },
     {
         "objectId" : "kitchen-tap-outline",
         "objectName": "kitchen taps", 
-        "objectDescription": "turn off taps, don't waste water"
+        "objectDescription": "Turn off taps, don't waste water."
     },
     {
         "objectId" : "bathroom-tap-outline",
         "objectName": "bathroom taps", 
-        "objectDescription": "turn off taps, don't waste water  DUPLICATE"
+        "objectDescription": "Turn off taps, don't waste water."
     },
     {
         "objectId" : "kitchen-sink-outline",
         "objectName": "Dishes and dishwasher",
-        "objectDescription": "dishwashers save water/energy over washing manually"
+        "objectDescription": "Dishwashers save water/energy over washing manually."
     },
     {
         "objectId" : "microwave-outline",
         "objectName": "microwave and oven",
-        "objectDescription": "using different appliances can save energy when cooking"
+        "objectDescription": "Using different appliances can save energy when cooking."
     },
     {
         "objectId" : "livingroom-lights-outline",
         "objectName": "living room",
-        "objectDescription": "turn off unused lights"
+        "objectDescription": "Turn off unused lights."
     },
     {
         "objectId" : "bedroom-lights-outline",
         "objectName": "bedroom lights",
-        "objectDescription": "turn off unused lights  DUPLICATE"
+        "objectDescription": "Turn off unused lights."
     },
     {
         "objectId" : "tv-outline",
         "objectName": "TV",
-        "objectDescription": "unplug unused devices, standby wastes energy"
+        "objectDescription": "Unplug unused devices, standby wastes energy."
     },
     {
         "objectId" : "covers-outline",
         "objectName": "bed covers",
-        "objectDescription": "use seasonal sheets to save on air conditioning/heating"
+        "objectDescription": "Use seasonal sheets to save on air conditioning/heating."
     },
     {
         "objectId" : "socket-outline",
         "objectName": "power socket",
-        "objectDescription": "unplug chargers when not in use"
+        "objectDescription": "Unplug chargers when not in use."
     },
     {
         "objectId" : "toilet-outline",
         "objectName": "toilet",
-        "objectDescription": "save water, fewer flushes, newer efficient toilets"
+        "objectDescription": "Save water, fewer flushes, newer efficient toilets."
     },
     {
         "objectId" : "toilet-paper-outline",
         "objectName": "toilet paper",
-        "objectDescription": "use recycled paper"
+        "objectDescription": "Use recycled paper."
     },
     {
         "objectId" : "washing-machine-outline",
         "objectName": "washing machine",
-        "objectDescription": "use cooler washes and only wash full loads"
+        "objectDescription": "Use cooler washes and only wash full loads."
     },
     {
         "objectId" : "shower-outline",
         "objectName": "shower and bath",
-        "objectDescription": "short showers save water over baths"
+        "objectDescription": "Short showers save water over baths."
     }
 ]
