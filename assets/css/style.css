@@ -225,11 +225,9 @@ svg .disabled * {
     stroke: none;
 }
 
-.object-outline:hover {
-    fill: red;
-}
-
+.object-outline:hover,
 .power-station-outline:hover,
 #power-station-trigger:hover > .power-station-outline {
-    fill: red;
+    fill: #FF000022;
+    /* mix-blend-mode: screen; */
 }
