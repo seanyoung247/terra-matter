@@ -7,11 +7,12 @@
     {
         "objectId" : "power-station-trigger",
         "objectName": "Power station",
-        "objectDescription": "Switch to an eco-energy plan"
+        "objectDescription": "Switch to an eco-energy plan."
     },
     {
         "objectId" : "fridge-outline",
         "objectName": "fridge",
+
         "objectDescription": "All appliances sold in the EU have an energy rating from A+++ to G which can be found on the label. The A+++ rating is the most energy efficient and G is the least efficient. Appliances with a lower rating cost much more to run than those with a high rating. So, if you have a lot of white goods e.g. washing machine, fridge/freezer, or oven with a low rating, it might be worth replacing them with more efficient models sooner rather than later, in order to save the Earth and your money."
     },
     {
@@ -22,17 +23,17 @@
     {
         "objectId" : "kitchen-tap-outline",
         "objectName": "kitchen taps", 
-        "objectDescription": "turn off taps, don't waste water"
+        "objectDescription": "Turn off taps, don't waste water."
     },
     {
         "objectId" : "bathroom-tap-outline",
         "objectName": "bathroom taps", 
-        "objectDescription": "turn off taps, don't waste water  DUPLICATE"
+        "objectDescription": "Turn off taps, don't waste water."
     },
     {
         "objectId" : "kitchen-sink-outline",
         "objectName": "Dishes and dishwasher",
-        "objectDescription": "dishwashers save water/energy over washing manually"
+        "objectDescription": "Dishwashers save water/energy over washing manually."
     },
     {
         "objectId" : "microwave-outline",
@@ -57,31 +58,31 @@
     {
         "objectId" : "covers-outline",
         "objectName": "bed covers",
-        "objectDescription": "use seasonal sheets to save on air conditioning/heating"
+        "objectDescription": "Use seasonal sheets to save on air conditioning/heating."
     },
     {
         "objectId" : "socket-outline",
         "objectName": "power socket",
-        "objectDescription": "unplug chargers when not in use"
+        "objectDescription": "Unplug chargers when not in use."
     },
     {
         "objectId" : "toilet-outline",
         "objectName": "toilet",
-        "objectDescription": "save water, fewer flushes, newer efficient toilets"
+        "objectDescription": "Save water, fewer flushes, newer efficient toilets."
     },
     {
         "objectId" : "toilet-paper-outline",
         "objectName": "toilet paper",
-        "objectDescription": "use recycled paper"
+        "objectDescription": "Use recycled paper."
     },
     {
         "objectId" : "washing-machine-outline",
         "objectName": "washing machine",
-        "objectDescription": "use cooler washes and only wash full loads"
+        "objectDescription": "Use cooler washes and only wash full loads."
     },
     {
         "objectId" : "shower-outline",
         "objectName": "shower and bath",
-        "objectDescription": "short showers save water over baths"
+        "objectDescription": "Short showers save water over baths."
     }
 ]
