@@ -114,3 +114,21 @@ main {
 #issues-panel > h4 {
   border-bottom: 1px solid white;
 }
+
+#reset-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#reset-btn:hover {
+  color: red;
+  border: 1px solid red;
+}
+
+#reset-btn:active {
+  color: red;
+  background-color: white;
+}
