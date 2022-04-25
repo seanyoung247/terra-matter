@@ -18,19 +18,11 @@ This project is created in recognition of Earth day and our love and care of our
   * [Audience Definition](#Audience-Definition)
   * [User Stories](#User-Stories)
   * [Design Choices](#Design-Choices)
-  * [Wireframes](#Wireframes)
-  * [Different Design](#Different-Design)
-* [Features](#Features)
-  * [Existing Features](#Existing-Features)
-  * [Features to Implement in the Future Versions](#Features-to-Implement-in-the-Future-Versions)
 * [Technologies Used](#Technologies-Used)
 * [Testing](#Testing)
 * [Deployment](#Deployment)
   * [Live Deployment](#Live-Deployment)
   * [Local Deployment](#Local-Deployment)
-* [Bugs](#Bugs)
-  * [Solved](#Solved)
-  * [Unsolved](#Unsolved)
 * [Credits](#Credits)
   * [Content](#Content)
   * [Media](#Media)
@@ -73,7 +65,6 @@ The targeted audience is international and adress everyone (from Earth and beyon
 * Learning.
 * Improving their knowledge.
 * Checking on some information.
-* A challenge. (if quiz implemented)
 * Having fun.
 
 #### This website is the best way to answer their needs because :
@@ -82,7 +73,6 @@ The targeted audience is international and adress everyone (from Earth and beyon
 * It follows the best learning practice.
 * It displays the content interactively.
 * It gives an enjoyable learning experience.
-* It proposes a game to test and reinforce knowledge. =============================> If implemented
 * It rewards users by displaying achievements icons upon leaning new things.
 
 [**:back:** *Table of Content*](#Table-of-Content)
@@ -136,65 +126,6 @@ It presents a clean, playful, welcoming and trustworthy feel in order to bring q
 
 [**:back:** *Table of Content*](#Table-of-Content)
 
-### **Wireframes**
-
-![Site Map](assets/README-images/wireframes/site-map.png)
-
-* [Site Map](assets/README-images/wireframes/site-map.pdf)
-* [Home](assets/README-images/wireframes/home.pdf)
-* [About](assets/wireframes/about.pdf)
-* [Contact](assets/README-images/wireframes/contact.pdf)
-* [404 error](assets/README-images/wireframes/404-error.pdf)
-
-For the full version:
-
-* [Terra Matter](assets/README-images/wireframes/terra-matter.pdf)
-
-### **Different Design**
- 
-
-[**:back:** *Table of Content*](#Table-of-Content)
-
-## Features
-
-### Home
-
-![Home page](assets/README-images/features/home-page.png)
-
-### About
-
-![About page](assets/README-images/features/about-page.png)
-
-### Contact
-
-The contact page is very simple and offer users a way to reach out to the website owner.  
-EmailJS has been implemented and allows the management of emails without needing the server side. It has been set to send an automatic email back to the user for better user experience.
-
-There are four fields to fill up:
-
-* Your name: → Who the person is.
-* Email address: → To be answered back.
-* Feedback or Question: → A textarea to provide additional information.
-* A send button is displayed as well to send the form.  
-
-![Contact page](assets/README-images/features/contact-page.png)
-
-Upon sending, a pop-up will give feedback to the user thanking him for the message. It will provide as well a link to the home and about pages in order to provide the main navigation links for better user experience.  
-A similar feature will display if the form fail to send.
-
-### 404 error
-
-A custom page will handle the “404 error” by displaying a message explaining the error.  
-It provides a button to go back to the home page and some useful links.
-
-* A link that will bring the user to a website that explain what is a 404 error.
-* A link that bring the user to the contact page to report an issue.
-
-![404 page](assets/README-images/features/error-page.png)
-
-[**:back:** *Table of Content*](#Table-of-Content)
-
-### **Features to Implement in the Future Versions**
 
 # Technologies Used 
 
@@ -202,7 +133,6 @@ It provides a button to go back to the home page and some useful links.
 
 This project uses HTML, CSS and JavaScript.
 
- ===================================================================== TO Be UPDATED
 ### Frameworks, Libraries and Programs
 
 * [Balsamiq](https://balsamiq.com/wireframes/)  
@@ -253,7 +183,6 @@ For deploying the website live.
 [**:back:** *Table of Content*](#Table-of-Content)
 
 
-============================================================================ TO BE UPDATED
 ## Deployment
 
 This project was developed on [GitPod Workspaces IDE](https://gitpod.io/workspaces/) (Integrated Development Environment) committed and pushed to my [GitHub Repository](https://github.com/seanyoung247/terra-matter) using GitPod Command Line Interface (CLI).
@@ -365,8 +294,7 @@ Free account are avaible and was used in this project limiting the number of ema
 
 ## Testing
 
-Testing information are published in a separate file : [TESTING.md](TESTING.md)
-
+All goog to go ;)
 ## Bugs
 
 ### Solved
@@ -398,14 +326,10 @@ Various source images were used to create the site content:
  - Windmills [Green power vector created by brgfx](https://www.freepik.com/vectors/green-power)
  - Power Sockets and chargers [Set vector created by kubanek ](https://www.freepik.com/vectors/set)
 
-##### External links :
-
-[Wikipedia 404 error definition](https://en.wikipedia.org/wiki/HTTP_404)
-
-##### Icons :
-
-##### Images :
 
 ### Aknowledgements :
+
+Thank you everyone :)
+
 
 [**:back:** *Table of Content*](#Table-of-Content)
