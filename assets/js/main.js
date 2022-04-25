@@ -26,7 +26,6 @@
 
     function objectClick() {
         if (actions[this.id]) {
-            
             actions[this.id].do(updateState);
         }
     }

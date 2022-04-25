@@ -14,7 +14,8 @@ function loadState() {
     let triggered_count = 0;
     for (const action in actions) {
         const triggered = (localStorage.getItem(action) === 'true');
-        if (this.triggered) {
+        if (triggered) {
+
             triggered_count++;
             actions[action].triggered = true;
             actions[action].setGraphic();
@@ -135,7 +136,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const blackout = document.getElementById('livingroom-blackout');
-            blackout.classList.add('disabled');
+            blackout.classList.remove('disabled');
         },
         do: function(callback) {
             incCount(this);
@@ -164,7 +165,7 @@ const actions = {
         triggered: false,
         setGraphic: function() {
             const blackout = document.getElementById('bedroom-blackout');
-            blackout.classList.add('disabled');
+            blackout.classList.remove('disabled');
         },
         do: function(callback) {
             incCount(this);
