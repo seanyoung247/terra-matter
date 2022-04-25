@@ -36,13 +36,8 @@
     },
     {
         "objectId" : "microwave-outline",
-<<<<<<< HEAD
-        "objectName": "microwave",
-        "objectDescription": "Where possible use a microwave for cooking, and use the toaster rather than the grill."
-=======
         "objectName": "microwave and oven",
-        "objectDescription": "using different appliances can save energy when cooking"
->>>>>>> 9180958451ca51f79b7c76e33e74c089f5acce98
+        "objectDescription": "Where possible use a microwave for cooking, and use the toaster rather than the grill."
     },
     {
         "objectId" : "livingroom-lights-outline",
