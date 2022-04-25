@@ -10,7 +10,7 @@ function loadState() {
     let triggered_count = 0;
     for (const action in actions) {
         const triggered = (localStorage.getItem(action) === 'true');
-        if (triggered) {
+        if (this.triggered) {
             triggered_count++;
             actions[action].triggered = true;
             actions[action].setGraphic();
@@ -33,8 +33,8 @@ const dishes = {
         dishes.classList.toggle('disabled');
     },
     do: function(callback) {
-        this.setGraphic();
         incCount(this, 2);
+        this.setGraphic();
         callback(issues);
         displayObjectInformation("kitchen-sink-outline")
     }
@@ -44,7 +44,6 @@ const cooking = {
     triggered: false,
     setGraphic: function() {},
     do: function(callback) {
-
         incCount(this, 2);
         callback(issues);
         displayObjectInformation("microwave-outline")
@@ -61,9 +60,8 @@ const actions = {
             windmills.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             displayObjectInformation("power-station-trigger")
         }
@@ -76,9 +74,8 @@ const actions = {
             insulation.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             console.log('attic clicked')
             displayObjectInformation("attic-object")
@@ -115,9 +112,8 @@ const actions = {
             stream.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             displayObjectInformation("kitchen-tap-outline")
         }
@@ -137,9 +133,8 @@ const actions = {
             blackout.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             displayObjectInformation("livingroom-lights-outline")
         }
@@ -152,8 +147,8 @@ const actions = {
             tvLed.classList.toggle('off');
         },
         do: function(callback) {
-            this.setGraphic();
             incCount(this);
+            this.setGraphic();
             callback(issues);
             displayObjectInformation("tv-outline")
         }
@@ -167,9 +162,9 @@ const actions = {
             blackout.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
+            callback(issues);
             displayObjectInformation("bedroom-lights-outline")
         }
     },
@@ -191,9 +186,8 @@ const actions = {
             charger.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             displayObjectInformation("socket-outline")
         }
@@ -229,9 +223,8 @@ const actions = {
             stream.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             displayObjectInformation("bathroom-tap-outline")
         }
@@ -246,9 +239,8 @@ const actions = {
             stream.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             displayObjectInformation("shower-outline")
         }
