@@ -54,6 +54,12 @@
         // Setup initial state
         updateState(loadState());
     });
+
+    // Reset button
+    document.getElementById('reset-btn').addEventListener('click', function() {
+        resetStorage();
+        window.location.reload();
+    });
 })();
 
 /*

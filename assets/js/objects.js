@@ -31,6 +31,12 @@ function saveState() {
     }
 }
 
+function resetStorage() {
+    for (const action in actions) {
+        localStorage.setItem(action, false);
+    }
+}
+
 const dishes = {
     triggered: false,
     setGraphic: function() {
