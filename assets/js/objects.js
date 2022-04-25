@@ -10,7 +10,7 @@ function loadState() {
     let triggered_count = 0;
     for (const action in actions) {
         const triggered = (localStorage.getItem(action) === 'true');
-        if (triggered) {
+        if (this.triggered) {
             triggered_count++;
             actions[action].triggered = true;
             actions[action].setGraphic();
@@ -33,8 +33,8 @@ const dishes = {
         dishes.classList.toggle('disabled');
     },
     do: function(callback) {
-        this.setGraphic();
         incCount(this, 2);
+        this.setGraphic();
         callback(issues);
         //TO DO: Show information dialog
     }
@@ -44,7 +44,6 @@ const cooking = {
     triggered: false,
     setGraphic: function() {},
     do: function(callback) {
-
         incCount(this, 2);
         callback(issues);
         //TO DO: Show information dialog
@@ -61,9 +60,8 @@ const actions = {
             windmills.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }
@@ -76,9 +74,8 @@ const actions = {
             insulation.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }
@@ -114,9 +111,8 @@ const actions = {
             stream.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }
@@ -136,9 +132,8 @@ const actions = {
             blackout.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }
@@ -151,8 +146,8 @@ const actions = {
             tvLed.classList.toggle('off');
         },
         do: function(callback) {
-            this.setGraphic();
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }
@@ -166,9 +161,9 @@ const actions = {
             blackout.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
+            callback(issues);
             //TO DO: Show information dialog
         }
     },
@@ -190,9 +185,8 @@ const actions = {
             charger.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }
@@ -228,9 +222,8 @@ const actions = {
             stream.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }
@@ -245,9 +238,8 @@ const actions = {
             stream.classList.toggle('disabled');
         },
         do: function(callback) {
-            this.setGraphic();
-
             incCount(this);
+            this.setGraphic();
             callback(issues);
             //TO DO: Show information dialog
         }

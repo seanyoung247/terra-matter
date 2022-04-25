@@ -114,13 +114,20 @@ svg .disabled * {
     fill: var(--sml-tree-foliage);
 }
 
-.tree-shadow {
+/* .tree-shadow {
     fill: var(--tree-foliage);
     mix-blend-mode: multiply;
-}
+} */
 
 .tree-trunk {
     fill: var(--tree-trunk);
+}
+
+/* Transitions */
+.sky,
+.near-grass, .far-grass,
+.tree-foliage, .tree-trunk {
+    transition: all 0.5s;
 }
 
 /* Object trigger styles */
