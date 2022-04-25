@@ -190,7 +190,6 @@ const actions = {
         do: function(callback) {
             const water = document.getElementById('water-stream');
             const stream = document.getElementById('water-lines');
-            console.log(water);
             water.classList.toggle('disabled');
             stream.classList.toggle('disabled');
 
