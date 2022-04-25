@@ -7,38 +7,37 @@
     {
         "objectId" : "power-station-trigger",
         "objectName": "Power station",
-        "objectDescription": "Switch to an eco-energy plan."
+        "objectDescription": "Switch to an eco-energy plan"
     },
     {
         "objectId" : "fridge-outline",
         "objectName": "fridge",
-
         "objectDescription": "All appliances sold in the EU have an energy rating from A+++ to G which can be found on the label. The A+++ rating is the most energy efficient and G is the least efficient. Appliances with a lower rating cost much more to run than those with a high rating. So, if you have a lot of white goods e.g. washing machine, fridge/freezer, or oven with a low rating, it might be worth replacing them with more efficient models sooner rather than later, in order to save the Earth and your money."
     },
     {
         "objectId" : "kettle-outline",
         "objectName": "kettle",
-        "objectDescription": "Don’t fill the kettle. If you’re stopping work for a coffee break, only boil the kettle with as much water as you need. It’ll boil quicker and use less energy. A good rule of thumb for appliances is: if it makes things hot, then it uses a lot of electricity."
+        "objectDescription": "Don't fill the kettle. If you're stopping work for a coffee break, only boil the kettle with as much water as you need. It'll boil quicker and use less energy. A good rule of thumb for appliances is: if it makes things hot, then it uses a lot of electricity."
     },
     {
         "objectId" : "kitchen-tap-outline",
         "objectName": "kitchen taps", 
-        "objectDescription": "Turn off taps, don't waste water."
+        "objectDescription": "Use a basing in your sink when rinsing food and use it for watering plants."
     },
     {
         "objectId" : "bathroom-tap-outline",
         "objectName": "bathroom taps", 
-        "objectDescription": "Turn off taps, don't waste water."
+        "objectDescription": "Avoid using excess water at home by mending taps and running toilets."
     },
     {
         "objectId" : "kitchen-sink-outline",
         "objectName": "Dishes and dishwasher",
-        "objectDescription": "Dishwashers save water/energy over washing manually."
+        "objectDescription": "Newer dishwashers and clothes washers use water much more efficiently than older models. Water-efficient dishwashers save more than 1.8927 litres of water per year compared with washing dishes by hand (and use less than half as much energy, too)"
     },
     {
         "objectId" : "microwave-outline",
         "objectName": "microwave and oven",
-        "objectDescription": "Where possible use a microwave for cooking, and use the toaster rather than the grill."
+        "objectDescription": "Where possible use a microwave for cooking, and use the toaster rather than the grill and when your food is nearly cooked, turn off the rings/oven and use the built up heat to finish cooking your food."
     },
     {
         "objectId" : "livingroom-lights-outline",
@@ -58,31 +57,31 @@
     {
         "objectId" : "covers-outline",
         "objectName": "bed covers",
-        "objectDescription": "Use seasonal sheets to save on air conditioning/heating."
+        "objectDescription": "Use seasonal sheets to save on air conditioning/heating"
     },
     {
         "objectId" : "socket-outline",
         "objectName": "power socket",
-        "objectDescription": "Unplug chargers when not in use."
+        "objectDescription": "unplug chargers when not in use"
     },
     {
         "objectId" : "toilet-outline",
         "objectName": "toilet",
-        "objectDescription": "Save water, fewer flushes, newer efficient toilets."
+        "objectDescription": "Newer bathroom fixtures and appliances like toilets, showerheads and faucets are designed to be more water-efficient than older models and can save hundreds of liters a month. For example, older toilets use up to 22 liters per flush, whereas low-flow toilets (or any toilet manufactured after 1994) use 6 liters or less."
     },
     {
         "objectId" : "toilet-paper-outline",
         "objectName": "toilet paper",
-        "objectDescription": "Use recycled paper."
+        "objectDescription": "Recycled toilet paper is made from 100% post-consumer waste, such as textbooks and office paper. Using recycled paper means fewer trees are cut down, leaving them in the ground to keep our air clean, provide homes for animals and protect soil from erosion."
     },
     {
         "objectId" : "washing-machine-outline",
         "objectName": "washing machine",
-        "objectDescription": "Use cooler washes and only wash full loads."
+        "objectDescription": "Newer washing machines handle much bigger loads of clothing with much less water. A full-sized ENERGY STAR-certified clothes washer uses 49 litres of water per load, compared to the 87 litres used by a standard machine, saving over 11356.24 litres of water per year."
     },
     {
         "objectId" : "shower-outline",
         "objectName": "shower and bath",
-        "objectDescription": "Short showers save water over baths."
+        "objectDescription": "Taking a shorter shower can save up to 10 litres of water a minute."
     }
 ]
