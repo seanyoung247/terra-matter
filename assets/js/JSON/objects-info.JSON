@@ -1,8 +1,9 @@
 [
     {
-        "objectId" : "attic-object",
-        "objectName": "attic floor",
-        "objectDescription": "Install insulation"
+        "attic-object": {
+            "objectName": "attic floor",
+            "objectDescription": "Install insulation"
+        }
     },
     {
         "objectId" : "power-station-trigger",

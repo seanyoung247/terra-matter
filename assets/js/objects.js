@@ -51,7 +51,8 @@ const actions = {
 
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            console.log('attic clicked')
+            displayObjectInformation("attic-object")
         }
     },
 
@@ -211,16 +212,29 @@ const actions = {
 }
 
 
-function getObjectInformation() {
+// function getObjectInformation() {
+//     fetch("assets/js/JSON/objects-info.JSON")
+//         .then((res) => {
+//             return res.json();
+//         })
+//         .then((data) => {
+//             let objectsInfo = data;
+//         });
+// }
+let objectModal = document.getElementById("object-info-modal")
+let modalTitle = document.getElementById("object-name")
+let modalContent = document.getElementById("object-description")
+function displayObjectInformation(item) {
     fetch("assets/js/JSON/objects-info.JSON")
         .then((res) => {
             return res.json();
         })
         .then((data) => {
             let objectsInfo = data;
+            console.log("in the then fucntion")
+            let objectInfoSelected = objectsInfo[item] 
+            modalTitle.innerText = objectInfoSelected.objectName
+            modalContent.innerText = objectInfoSelected.objectDescription
+            objectModal.classList.add("show")
         });
-}
-
-function displayObjectInformation(item) {
-    
 }
