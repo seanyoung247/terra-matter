@@ -1,86 +1,28 @@
 
-const objects = document.querySelectorAll('.object-outline,.power-station-outline');
+const graphic = document.getElementById('house-svg');
+const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
 const objectCount = objects.length;
+/**
+ * state is a value between 0.0 and 1.0 reflecting how many objects have been activated.
+ * Where 0.0 is 0% and 1.0 is 100%.
+ */
+let state = 0.0;
 
-for (const object of objects) {
-    console.log(object);
-    object.addEventListener('click', function(e) {
-        let objId = (this.id) ? this.id : this.parentElement.id;
-        console.log(objId);
-    });
+/**
+ * Updates state with the current number of activated objects.
+ * @param {Number} count - The current number of activated objects
+ */
+function updateState(count) {
+    state = count / objectCount;
+    console.log(state);
+    graphic.style.setProperty('--mix', state);
 }
 
-
-/*
-    Object IDs:
-
-    attic-object - Trigger for floor space of loft
-        loft-insulation - loft insulation graphic
-
-    power-station-outline - Trigger for coal fired power station
-        power-plant - coal fired station graphic
-        windmills - windmill graphic
-    
-    kitchen:
-        fridge-outline - Trigger for fridge
-            fridge - fridge graphic
-
-        kettle-outline - Trigger for kettle
-            kettle - Kettle graphic
-
-        kitchen-tap-outline - Trigger for kitchen tap
-            tap - kitchen tap graphic
-            kitchen-water-line, kitchen-sink-water: water graphic
-
-        kitchen-sink-outline - Trigger for kitchen sink
-            sink - graphic for sink and tap
-            dishes - dirty dishes graphic
-            dishwasher - dishwasher graphic
-
-        microwave-outline - Trigger for microwave
-            microwave - microwave graphic
-
-        dishwasher-outline - Trigger for dishwasher
-            dishwasher - dishwasher graphic
-
-        oven-outline - Trigger for oven
-            oven - oven graphic
-
-    living room:
-        livingroom-lights-outline - livingroom lights trigger
-            livingroom-lights - livingroom lights graphics
-            livingroom-blackout - graphic to make room darker when lights are off
-        
-        tv-outline - TV trigger
-            TV - TV graphic
-
-    bedroom:
-        bedroom-lights-outline - bedroom lights trigger
-            bedroom-lights - bedroom lights graphics
-            bedroom-blackout - graphic to make room darker when lights are off
-
-        covers-outline - bedroom covers trigger
-        
-        socket-outline - power socket trigger
-            bedroom-socket - bedroom socket graphic
-            charger - charger/power lead graphic
-
-    bathroom:
-        toilet-outline - toilet trigger
-            toilet - toilet graphic
-        
-        toilet-paper-outline - toilet paper trigger
-            toilet-paper - toilet paper graphic
-        
-        bathroom-tap-outline - bathroom tap trigger
-            bathroom-tap - bathroom tap graphic
-            bathroom-sink-water, bathroom-sink-water-line - water graphics
-        
-        shower-outline - shower trigger
-            bath - bath graphic
-            shower-pipe, shower-head - shower graphic
-            water-stream, water-lines - shower water graphics
-        
-        washing-machine-outline - washing machine trigger
-            washing-machine - washing machine graphic
- */
+function objectClick() {
+    if (actions[this.id]) {
+        actions[this.id].do(updateState);
+    }
+}
+for (const object of objects) {
+    object.addEventListener('click', objectClick);
+}
