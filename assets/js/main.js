@@ -3,7 +3,7 @@
  * Page setup and state management
  */
 (function() {
-    const svgPath = window.location.origin + '/assets/templates/svg.html';
+    const svgPath = 'assets/templates/svg.html';
 
     const graphic = document.getElementById('house-svg');
     const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
