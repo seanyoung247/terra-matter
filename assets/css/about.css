@@ -1,11 +1,11 @@
 @import url("style.css");
 
-.modal-header,
-.modal-footer {
+.modal__about-header,
+.modal__about-footer {
    background: #006737;
 }
 
-.modal-title {
+.modal__about-title {
   color: #fff;
   font-family: var(--font__family);
   font-weight: var(--font__title--weight);
@@ -14,11 +14,11 @@
   letter-spacing: 2px;
 }
 
-.modal-body {
+.modal__about-body {
   background: #28abe1;
 }
 
-.modal-body p {
+.modal__about-body p {
   font-size: var(--font__text--size);
   font-family: var(--font__family);
   letter-spacing: 1px;

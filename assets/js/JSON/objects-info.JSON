@@ -2,7 +2,7 @@
     {
         "objectId" : "attic-object",
         "objectName": "attic floor",
-        "objectDescription": "Install insulation."
+        "objectDescription": "Which insulates the roof of your house at a ceiling level. This is quite a cost-effective way to insulate and should cause minimal disruption. According to the SEAI, on average, a home loses 20 to 30% of its heat through its walls and up to 30% through a poorly insulated attic."
     },
     {
         "objectId" : "power-station-trigger",
@@ -12,12 +12,13 @@
     {
         "objectId" : "fridge-outline",
         "objectName": "fridge",
-        "objectDescription": "update to energy efficient appliances."
+
+        "objectDescription": "All appliances sold in the EU have an energy rating from A+++ to G which can be found on the label. The A+++ rating is the most energy efficient and G is the least efficient. Appliances with a lower rating cost much more to run than those with a high rating. So, if you have a lot of white goods e.g. washing machine, fridge/freezer, or oven with a low rating, it might be worth replacing them with more efficient models sooner rather than later, in order to save the Earth and your money."
     },
     {
         "objectId" : "kettle-outline",
         "objectName": "kettle",
-        "objectDescription": "Don't boil more water than you need."
+        "objectDescription": "Don’t fill the kettle. If you’re stopping work for a coffee break, only boil the kettle with as much water as you need. It’ll boil quicker and use less energy. A good rule of thumb for appliances is: if it makes things hot, then it uses a lot of electricity."
     },
     {
         "objectId" : "kitchen-tap-outline",
@@ -37,22 +38,22 @@
     {
         "objectId" : "microwave-outline",
         "objectName": "microwave and oven",
-        "objectDescription": "Using different appliances can save energy when cooking."
+        "objectDescription": "Where possible use a microwave for cooking, and use the toaster rather than the grill."
     },
     {
         "objectId" : "livingroom-lights-outline",
         "objectName": "living room",
-        "objectDescription": "Turn off unused lights."
+        "objectDescription": "Switch to LED lights. If you need electric lighting when working from home, switch to LED lights. They use about a fifth of the energy of halogen bulbs. They may be more expensive than halogen but will save you money in the long term. According to the SEAI, switching a single 42-watt halogen bulb to a 9-watt LED, will save about €7 a year. And LEDs last up to 10 times longer. Where possible, make the most of natural light throughout the day."
     },
     {
         "objectId" : "bedroom-lights-outline",
         "objectName": "bedroom lights",
-        "objectDescription": "Turn off unused lights."
+        "objectDescription": "Turn off lights when you are leaving a room or when you do not need them."
     },
     {
         "objectId" : "tv-outline",
         "objectName": "TV",
-        "objectDescription": "Unplug unused devices, standby wastes energy."
+        "objectDescription": "Plug out all appliances when not in use.  Pay particular attention to computers and printers. Even in standby mode devices from TVs to toasters are using 20% of the energy they would consume if they were switched on."
     },
     {
         "objectId" : "covers-outline",
