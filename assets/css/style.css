@@ -94,8 +94,8 @@ main {
 .navbar__link:hover, 
 .navbar__link:active,
 .navbar__link--active {
-  color: var(--color__primary);
-  border-bottom: 2px solid var(--color__primary);
+  color: var(--color__secondary);
+  border-bottom: 2px solid var(--color__secondary);
 }
 
 /* 
