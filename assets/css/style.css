@@ -7,6 +7,10 @@
 :root {
   /* Font */
   --font__family: 'Roboto', sans-serif;
+  --font__title--size: 30px;
+  --font__title--weight: 300;
+  --font__text--size: 20px;
+  --font__text--weight: 400;
 
   /* Colors */
   --color__text--dark: #333;
@@ -34,7 +38,8 @@ a {
     -moz-user-select: none;
     -webkit-user-select: none;
 
-    font-family: "Handlee", cursive;
+    font-family: var(--font__family);
+    /* font-family: "Handlee", cursive; */
     font-weight: bold;
     text-decoration: none;
     text-align: center;
@@ -90,21 +95,92 @@ main {
   border-bottom: 2px solid var(--color__primary);
 }
 
-/* ------------------------- Footer ------------------------- */
-
-.icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
+/* 
+ * SVG styles
+ */
+.metal_x002D_body {
+    fill: #CCCCCC;
 }
 
-.icons__link {
-  color: var(--color__primary);
-  font-size: 30px;
-  padding:35px;
+.oven_x002D_door_x002D_body {
+    fill: #3A4245;
 }
 
-.icons__link:hover {
-  color: var(--color__secondary);
+.oven_x002D_cavity {
+    fill: #4D5256;
 }
+
+.metal_x002D_details {
+    fill: #4C5155;
+}
+
+.oven_x002D_door_x002D_handle {
+    fill: #CCCACD;
+}
+
+.oven_x002D_door_x002D_highlight {
+    opacity: 0.2;
+    fill: #FFFFFF;
+}
+
+.metal_x002D_shadow {
+    fill: #B3B3B3;
+}
+
+.highlight {
+    fill: #FFFFFF;
+}
+
+.standby_x002D_light {
+    fill: #FF3912;
+}
+
+.water {
+    fill: #00B4D5;
+    fill-opacity: 0.75;
+}
+
+.water_x002D_highlight {
+    fill: none;
+    stroke: #DBEFF8;
+    stroke-width: 0.5;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 1, 3;
+}
+
+/* Tree Styles */
+.tree-shadow {
+    fill: #8CB347;
+    mix-blend-mode: multiply;
+}
+.tree-foliage {
+    fill: #8CB347;
+}
+
+.tree-trunk {
+    fill: #603E2A;
+}
+
+/* Object trigger styles */
+.object-outline {
+    fill: #00000000;
+    stroke: none;
+}
+
+.power-station-outline {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #00000000;
+    stroke: none;
+}
+
+.object-outline:hover {
+    fill: red;
+}
+
+.power-station-outline:hover,
+#power-station-trigger:hover > .power-station-outline {
+    fill: red;
+}
+
