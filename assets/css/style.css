@@ -97,3 +97,19 @@ main {
   color: var(--color__secondary);
   border-bottom: 2px solid var(--color__secondary);
 }
+
+#issues-panel {
+  position: absolute;
+  top: 165px;
+  right: 25px;
+
+  padding: 10px;
+  background: #33333355;
+  color: white;
+
+  border-radius: 10px;
+}
+
+#issues-panel > h4 {
+  border-bottom: 1px solid white;
+}

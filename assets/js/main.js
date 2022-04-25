@@ -20,6 +20,10 @@
         state = count / objectCount;
         graphic.style.setProperty('--mix', state);
 
+        // Display state
+        document.getElementById('found-display').innerText = count;
+        document.getElementById('total-display').innerText = objectCount;
+
         // Save current state
         saveState();
     }
