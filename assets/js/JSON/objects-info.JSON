@@ -1,9 +1,8 @@
 [
     {
-        "attic-object": {
-            "objectName": "attic floor",
-            "objectDescription": "Install insulation"
-        }
+        "objectId" : "attic-object",
+        "objectName": "attic floor",
+        "objectDescription": "Install insulation"
     },
     {
         "objectId" : "power-station-trigger",
@@ -32,23 +31,13 @@
     },
     {
         "objectId" : "kitchen-sink-outline",
-        "objectName": "kitchen sink",
-        "objectDescription": "dishwashers save water/energy over washing manually DUPLICATE"
-    },
-    {
-        "objectId" : "dishwasher-outline",
-        "objectName": "dishwasher",
+        "objectName": "Dishes and dishwasher",
         "objectDescription": "dishwashers save water/energy over washing manually"
     },
     {
         "objectId" : "microwave-outline",
-        "objectName": "microwave",
+        "objectName": "microwave and oven",
         "objectDescription": "using different appliances can save energy when cooking"
-    },
-    {
-        "objectId" : "oven-outline",
-        "objectName": "oven",
-        "objectDescription": "using different appliances can save energy when cooking DUPLICATE"
     },
     {
         "objectId" : "livingroom-lights-outline",

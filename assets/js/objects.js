@@ -36,7 +36,7 @@ const dishes = {
         this.setGraphic();
         incCount(this, 2);
         callback(issues);
-        //TO DO: Show information dialog
+        displayObjectInformation("kitchen-sink-outline")
     }
 };
 
@@ -47,7 +47,7 @@ const cooking = {
 
         incCount(this, 2);
         callback(issues);
-        //TO DO: Show information dialog
+        displayObjectInformation("microwave-outline")
     }
 };
 
@@ -65,7 +65,7 @@ const actions = {
 
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("power-station-trigger")
         }
     },
 
@@ -92,7 +92,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("fridge-outline")
         }
     },
 
@@ -102,7 +102,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("kettle-outline")
         }
     },
 
@@ -119,7 +119,7 @@ const actions = {
 
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("kitchen-tap-outline")
         }
     },
 
@@ -141,7 +141,7 @@ const actions = {
 
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("livingroom-lights-outline")
         }
     },
 
@@ -155,7 +155,7 @@ const actions = {
             this.setGraphic();
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("tv-outline")
         }
     },
 
@@ -170,7 +170,7 @@ const actions = {
             this.setGraphic();
 
             incCount(this);
-            //TO DO: Show information dialog
+            displayObjectInformation("bedroom-lights-outline")
         }
     },
 
@@ -180,7 +180,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("covers-outline")
         }
     },
 
@@ -195,7 +195,7 @@ const actions = {
 
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("socket-outline")
         }
     },
 
@@ -206,7 +206,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("toilet-outline")
         }
     },
 
@@ -216,7 +216,7 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("toilet-paper-outline")
         }
     },
 
@@ -233,7 +233,7 @@ const actions = {
 
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("bathroom-tap-outline")
         }
     },
 
@@ -250,7 +250,7 @@ const actions = {
 
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
+            displayObjectInformation("shower-outline")
         }
     },
 
@@ -260,22 +260,12 @@ const actions = {
         do: function(callback) {
             incCount(this);
             callback(issues);
-            //TO DO: Show information dialog
             displayObjectInformation("washing-machine-outline")
         }
     }
 }
 
-
-// function getObjectInformation() {
-//     fetch("assets/js/JSON/objects-info.JSON")
-//         .then((res) => {
-//             return res.json();
-//         })
-//         .then((data) => {
-//             let objectsInfo = data;
-//         });
-// }
+// Display the modal with the corresponding info
 let objectModal = document.getElementById("object-info-modal")
 let modalTitle = document.getElementById("object-name")
 let modalContent = document.getElementById("object-description")
@@ -286,10 +276,28 @@ function displayObjectInformation(item) {
         })
         .then((data) => {
             let objectsInfo = data;
+
+            for (let i = 0; i < objectsInfo.length; i++) {
+                if (objectsInfo[i].objectId === item) {
+                    objectName = objectsInfo[i].objectName
+                    objectDescription = objectsInfo[i].objectDescription
+                    break
+                }
+            }
             console.log("in the then fucntion")
-            let objectInfoSelected = objectsInfo[item] 
-            modalTitle.innerText = objectInfoSelected.objectName
-            modalContent.innerText = objectInfoSelected.objectDescription
-            objectModal.classList.add("show")
+            modalTitle.innerText = objectName
+            console.log(objectName)
+            modalContent.innerText = objectDescription
+            console.log(objectDescription)
+            objectModal.classList.add("show", "d-block")
         });
 }
+
+// Close object info modal
+let closeInfoModalButtons = document.querySelectorAll("[data-info-modal-dismiss]")
+console.log(closeInfoModalButtons)
+closeInfoModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        objectModal.classList.remove("show", "d-block");
+    });
+});
