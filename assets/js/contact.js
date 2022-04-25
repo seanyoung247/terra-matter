@@ -1,5 +1,6 @@
 // jshint esversion: 8
 
+let contactModal = document.getElementById("contact-modal")
 let contactForm = document.getElementById("contact-form");
 let overlay = document.getElementById("contact-overlay");
 let loadingSpinner = document.getElementById("sending-spinner")
@@ -13,6 +14,7 @@ contactForm.addEventListener("submit", function (sendForm) {
     let customerName = document.getElementById("customer-name").value;
     let customerEmail = document.getElementById("customer-email").value;
     let message = document.getElementById("message").value;
+    let attr = contactModal.getAttributeNode("style");
 
     var templateParams = {
         customer_name: customerName,
@@ -22,8 +24,12 @@ contactForm.addEventListener("submit", function (sendForm) {
 
     emailjs.send('Gmail', 'terra-matter', templateParams)
         .then(function (response) {
+            contactModal.classList.remove("show")
+            contactModal.removeAttributeNode(attr);
             emailSuccess();
         }, function (error) {
+            contactModal.classList.remove("show")
+            contactModal.removeAttributeNode(attr);
             emailFail();
         });
 })

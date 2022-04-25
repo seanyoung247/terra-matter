@@ -1,11 +1,5 @@
 /* ------------------------- Contact page ------------------------- */
 
-.btn-back-home {
-    position: relative;
-    top: 6px;
-    left: 6px;
-}
-
 .overlay,
 .spinner-container {
     position: fixed;
@@ -39,10 +33,6 @@
     -moz-transition: opacity 350ms ease-in-out;
     -ms-transition: opacity 350ms ease-in-out;
     -webkit-transition: opacity 350ms ease-in-out;
-}
-
-.modal {
-    top: 30%;
 }
 
 .modal-footer {
