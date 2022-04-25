@@ -7,17 +7,20 @@ function incCount(obj, amt = 1) {
 }
 
 function loadState() {
-    issues = parseInt(localStorage.getItem('issues') || 0);
+    let triggered_count = 0;
     for (const action in actions) {
         const triggered = (localStorage.getItem(action) === 'true');
         if (triggered) {
+            triggered_count++;
+            actions[action].triggered = true;
             actions[action].setGraphic();
         }
     }
+    issues = triggered_count;
+    return issues;
 }
 
 function saveState() {
-    localStorage.setItem('issues', issues);
     for (const action in actions) {
         localStorage.setItem(action, actions[action].triggered);
     }

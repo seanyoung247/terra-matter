@@ -45,8 +45,7 @@
             object.addEventListener('click', objectClick);
         }
         // Setup initial state
-        loadState();
-        updateState(issues);
+        updateState(loadState());
     });
 })();
 
