@@ -4,10 +4,8 @@
  */
 (function() {
     const svgPath = 'assets/templates/svg.html';
-
-    const graphic = document.getElementById('house-svg');
-    const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
-    const objectCount = objects.length;
+    let graphic = null; 
+    let objectCount = 0;
     /**
      * state is a value between 0.0 and 1.0 reflecting how many objects have been activated.
      * Where 0.0 is 0% and 1.0 is 100%.
@@ -20,8 +18,10 @@
      */
     function updateState(count) {
         state = count / objectCount;
-        console.log(state);
         graphic.style.setProperty('--mix', state);
+
+        // Save current state
+        saveState();
     }
 
     function objectClick() {
@@ -37,9 +37,16 @@
         const content = document.getElementById('content');
         content.innerHTML = data;
 
+        const objects = document.querySelectorAll('.object-outline,#power-station-trigger');
+        objectCount = objects.length;
+        graphic = document.getElementById('house-svg');
+
         for (const object of objects) {
             object.addEventListener('click', objectClick);
         }
+        // Setup initial state
+        loadState();
+        updateState(issues);
     });
 })();
 
