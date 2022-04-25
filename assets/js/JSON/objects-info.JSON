@@ -31,23 +31,18 @@
     },
     {
         "objectId" : "kitchen-sink-outline",
-        "objectName": "kitchen sink",
-        "objectDescription": "dishwashers save water/energy over washing manually DUPLICATE"
-    },
-    {
-        "objectId" : "dishwasher-outline",
-        "objectName": "dishwasher",
+        "objectName": "Dishes and dishwasher",
         "objectDescription": "dishwashers save water/energy over washing manually"
     },
     {
         "objectId" : "microwave-outline",
+<<<<<<< HEAD
         "objectName": "microwave",
         "objectDescription": "Where possible use a microwave for cooking, and use the toaster rather than the grill."
-    },
-    {
-        "objectId" : "oven-outline",
-        "objectName": "oven",
-        "objectDescription": "using different appliances can save energy when cooking DUPLICATE"
+=======
+        "objectName": "microwave and oven",
+        "objectDescription": "using different appliances can save energy when cooking"
+>>>>>>> 9180958451ca51f79b7c76e33e74c089f5acce98
     },
     {
         "objectId" : "livingroom-lights-outline",
