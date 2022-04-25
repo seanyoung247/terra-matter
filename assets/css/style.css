@@ -74,6 +74,10 @@ main {
   letter-spacing: 1px;
   padding: 0 15px; 
   text-transform: uppercase;
+
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
 }
 
 /* the colors variables are not work with hover */
