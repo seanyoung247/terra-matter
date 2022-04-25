@@ -3,13 +3,16 @@
 
 
 /* ------------------------- General set up -------------------------   */
-root {
+
+:root {
   /* Font */
-  --font-family: 'Roboto', sans-serif;
+  --font__family: 'Roboto', sans-serif;
 
   /* Colors */
-  --color-text-dark: #444;
-  --color-text-light: #f1f1f1;  
+  --color__text--dark: #333;
+  --color__text--light: #f1f1f1;  
+  --color__primary: #1046B3;
+  --color__secondary: #006400;
 }
 
 * {
@@ -49,7 +52,6 @@ main {
 /* ------------------------- Header ------------------------- */
 .navbar {
   align-items: center;
-  background-color: var(--color-primary);
   display: flex;  
   justify-content: space-between;
   padding: 15px;
@@ -67,12 +69,13 @@ main {
 }
 
 .navbar__link{   
-  color: var(--color-text-dark);
+  color: var(--color__text--dark);
   font-size: 20px;
-  font-family: var(--font-family);
+  font-family: var(--font__family);
   font-weight: 500;
   letter-spacing: 1px;
-  padding: 0 15px; 
+  padding: 0 8px; 
+  margin: 0 15px;
   text-transform: uppercase;
 
   border: none;
@@ -80,11 +83,11 @@ main {
   background: transparent;
 }
 
-/* the colors variables are not work with hover */
 .navbar__link:hover, 
-.navbar__link--active{
-  color: #1046B3;
-  border-bottom: 2px solid #1046B3;
+.navbar__link:active,
+.navbar__link--active {
+  color: var(--color__primary);
+  border-bottom: 2px solid var(--color__primary);
 }
 
 /* 
@@ -228,6 +231,25 @@ svg .disabled * {
 .object-outline:hover,
 .power-station-outline:hover,
 #power-station-trigger:hover > .power-station-outline {
-    fill: #FF000022;
+fill: #FF000022;
     /* mix-blend-mode: screen; */
+}
+
+/* ------------------------- Footer ------------------------- */
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.icons__link {
+  color: var(--color__primary);
+  font-size: 30px;
+  padding:35px;
+}
+
+.icons__link:hover {
+  color: var(--color__secondary);
 }
