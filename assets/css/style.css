@@ -54,9 +54,10 @@ main {
   align-items: center;
   display: flex;  
   justify-content: space-between;
-  padding: 15px 15px 0 15px;
-  position: fixed;
-  width: 100%; 
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
 }
 
 .navbar__logo {
@@ -76,6 +77,10 @@ main {
   padding: 0 8px; 
   margin: 0 15px;
   text-transform: uppercase;
+
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
 }
 
 .navbar__link:hover, 
@@ -88,6 +93,32 @@ main {
 /* 
  * SVG styles
  */
+#house-svg {
+    --mix: 0.0;
+
+    --sky: hsl(184, calc((95% - 15%) * var(--mix) + 15%), 38%);
+    --grass-lerp: calc((113 - 45) * var(--mix) + 45);
+    --far-grass: hsl(var(--grass-lerp), 31%, 54%);
+    --near-grass: hsl(var(--grass-lerp), 37%, 52%);
+    --tree-lerp: calc((82 - 38) * var(--mix) + 38);
+    --tree-foliage: hsl(var(--tree-lerp), 43%, 49%);
+    --sml-tree-foliage: hsl(var(--tree-lerp), 43%, 60%);
+    --tree-trunk: hsl(22, calc((39% - 12%) * var(--mix) + 12%), 27%);
+}
+/* 
+sky = #04B2BF - hsl(184, 15%, 38%) to hsl(184, 95%, 38%)
+far-grass = #6DAD64 - hsl(45, 31%, 54%) to hsl(113, 31%, 54%)
+near-grass = #60B257 - hsl(45, 37%, 54%) to hsl(113, 37%, 52%)
+tree-foliage = #8CB347 - hsl(38, 43%, 49%) to hsl(82, 43%, 49%)
+tree-trunk = #603E2A - hsl(22, 12%, 27%) to hsl(22, 39%, 27%)
+*/
+
+svg .disabled,
+svg .disabled * {
+    fill: none;
+    stroke: none;
+}
+
 .metal_x002D_body {
     fill: #CCCCCC;
 }
@@ -123,6 +154,11 @@ main {
 
 .standby_x002D_light {
     fill: #FF3912;
+    stroke: #FF3912;
+}
+
+.standby_x002D_light.off {
+    fill: #FF391200;
 }
 
 .water {
@@ -139,17 +175,44 @@ main {
     stroke-dasharray: 1, 3;
 }
 
-/* Tree Styles */
-.tree-shadow {
-    fill: #8CB347;
-    mix-blend-mode: multiply;
+/* Background styles */
+.sky {
+    fill: var(--sky);
 }
-.tree-foliage {
-    fill: #8CB347;
+
+.far-grass {
+    fill: var(--far-grass);
+}
+
+.near-grass {
+    fill: var(--near-grass);
+}
+
+/* Tree styles */
+#tree4 .tree-foliage, #tree3 .tree-foliage,
+#tree4 .tree-shadow, #tree3 .tree-shadow {
+    --scaleY: calc((1.0 - 0.5) * var(--mix) + 0.5);
+    transform-box: fill-box;
+    transform-origin: bottom center;
+    transform: scaleX(var(--mix)) scaleY(var(--scaleY));
+    fill: var(--tree-foliage);
+}
+
+#tree2 .tree-foliage, #tree1 .tree-foliage,
+#tree2 .tree-shadow, #tree1 .tree-shadow {
+    transform-box: fill-box;
+    transform-origin: bottom center;
+    transform: scale(var(--mix));
+    fill: var(--sml-tree-foliage);
+}
+
+.tree-shadow {
+    fill: var(--tree-foliage);
+    mix-blend-mode: multiply;
 }
 
 .tree-trunk {
-    fill: #603E2A;
+    fill: var(--tree-trunk);
 }
 
 /* Object trigger styles */
@@ -165,13 +228,11 @@ main {
     stroke: none;
 }
 
-.object-outline:hover {
-    fill: red;
-}
-
+.object-outline:hover,
 .power-station-outline:hover,
 #power-station-trigger:hover > .power-station-outline {
-    fill: red;
+fill: #FF000022;
+    /* mix-blend-mode: screen; */
 }
 
 /* ------------------------- Footer ------------------------- */

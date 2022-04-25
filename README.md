@@ -219,7 +219,7 @@ For importing fonts (**Fredoka One**, **Handlee** and **Andika New Basic**) into
 For using icons throughout the website.
 
 * [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html?mv=search&mv=search&sdid=KCJMVLF6&ef_id=Cj0KCQjw6pOTBhCTARIsAHF23fLEZr_7HRwIXxz-8HlXPJdeIFcn4mgqdShGl6MxV75SQB7gldl4qukaAoC3EALw_wcB:G:s&s_kwcid=AL!3085!3!520938456683!e!!g!!adobe%20illustrator!1426208079!56320331272&gclid=Cj0KCQjw6pOTBhCTARIsAHF23fLEZr_7HRwIXxz-8HlXPJdeIFcn4mgqdShGl6MxV75SQB7gldl4qukaAoC3EALw_wcB)  
-For create the logo.
+For creating the logo and main site image content.
 
 * [favicon.io](https://favicon.io/favicon-converter/)  
 For generating the favicon.
@@ -384,9 +384,23 @@ Testing information are published in a separate file : [TESTING.md](TESTING.md)
 ### Content :
 
 [favicon.io](https://favicon.io/favicon-converter/)  
-For the converting the favicon and providing the links and explanation on how to install the favicon for the website.
+For converting the favicon and providing the links and explanation on how to install the favicon for the website.
 
 ### Media
+
+Various source images were used to create the site content:
+ - Television: [Mockup template vector created by MasoudRezaeipoor](https://www.freepik.com/vectors/mockup-template')
+ - Lamps and lights: [Floor lamp vector created by pch.vector](https://www.freepik.com/vectors/floor-lamp')
+ - Bathroom [Bathroom vector created by macrovector](https://www.freepik.com/vectors/bathroom')
+ - Kitchen [Kitchen cupboard vector created by iconicbestiary](https://www.freepik.com/vectors/kitchen-cupboard)
+ - Furniture [Clip art vector created by brgfx](https://www.freepik.com/vectors/clip-art)
+ - Sofas [Couch vector created by pch.vector](https://www.freepik.com/vectors/couch)
+ - Appliances [Household appliances vector created by macrovector](https://www.freepik.com/vectors/household-appliances)
+ - Trees [Flat tree vector created by freepik](https://www.freepik.com/vectors/flat-tree)
+ - Dishes [Dirty dishes vector created by macrovector](https://www.freepik.com/vectors/dirty-dishes)
+ - Power plant [Shop house vector created by macrovector](https://www.freepik.com/vectors/shop-house)
+ - Windmills [Green power vector created by brgfx](https://www.freepik.com/vectors/green-power)
+ - Power Sockets and chargers [Set vector created by kubanek ](https://www.freepik.com/vectors/set)
 
 ##### External links :
 
