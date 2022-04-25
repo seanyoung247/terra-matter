@@ -184,24 +184,3 @@ main {
     fill: red;
 }
 
-/* ------------------------- Footer ------------------------- */
-.footer--home {
-  background-color: #61b256;
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 50px;
-}
-
-.icons__link {
-  color: var(--color__primary);
-  font-size: 30px;
-  padding:35px;
-}
-
-.icons__link:hover {
-  color: var(--color__secondary);
-}
